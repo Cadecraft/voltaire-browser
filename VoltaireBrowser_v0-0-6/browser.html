@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="browser.css">
+    <script src="config.js"></script>
+    <!-- <script>
+      // Old variables
+      var globhomepg = 'https://google.com';
+    </script> -->
+    <script src="popup.js"></script>
+    <script src="tabs.js"></script>
+    <script src="browser.js"></script>
+    <script src="browser_main.js"></script>
+    <!-- <script src="readme.js"></script> -->
+  </head>
+  <body>
+    <div id="controls">
+
+      <div id="tab-controls" style="background-color:#505a64; height:35px;">
+        <ul id="tab-container" style="margin-top: 8px;">
+          <li id="new-tab"><a href="#new-tab">&#5161;</a></li>
+        </ul>
+        <img src="images/icon.png" style="float:right;" width="20px" height="20px">
+        <span id="br-name" style="float:right; font-size: 12px;">
+          VOLTAIRE BROWSER
+          <br> e
+        </span>
+      </div>
+
+      <!-- <div id="website-controls">
+        <ul id="website-container">
+        </ul>
+      </div> -->
+
+      <div id="browser-controls" style="margin-top:0px;">
+        <button id="back" title="Back" style="margin-left:0px;"><img src="images/ic-back.png" class="ico" width="20px;" height="20px;"></button> <!-- &#9664; -->
+        <button id="forward" title="Forward"><img src="images/ic-forward.png" class="ico" width="20px;" height="20px;"></button> <!-- &#9654; -->
+        <span>| </span>
+        <button id="home" title="Search" style="margin-left:0px;"><img src="images/ic-search.png" class="ico" width="20px;" height="20px;"></button> <!-- &#8962, &#x1F50E; --> <!-- Search -->
+        <button id="yt" title="YouTube"><img src="images/ic-yt.png" class="ico" width="20px;" height="20px;"></button> <!-- YT -->
+        <button id="discord" title="Discord"><img src="images/ic-discord.png" class="ico" width="20px;" height="20px;"></button> <!-- Disc. -->
+        <button id="remote" title="Chrome Remote Desktop"><img src="images/ic-remote.png" class="ico" width="20px;" height="20px;"></button> <!-- Remote desktop -->
+        <!--<button id="reload" title="Click to Reload">&#21325;</button>-->
+        <span>| </span>
+        <button id="reload" title="Reload" style="margin-left:0px;" class="waves-effect waves-light btn"><img src="images/ic-reload.png" class="ico" width="20px;" height="20px;"></button> <!-- &#10227; -->
+        <!--
+        &#8962 = home
+        &#x1F50E = search
+
+        <button id="reload" title="Reload">&#10227;</button>-->
+        <!-- <button id="terminate" title="Simulate Crash">&#9760;</button> -->
+
+        <form id="location-form" autocomplete="off">
+          <div id="center-column">
+            <input id="location" type="text" value="" placeholder="https://... or Google search">
+          </div>
+          <button type="submit" title="Go" style="margin-left:0px;"><img src="images/ic-forward.png" class="ico" width="20px;" height="20px;"></button>
+        </form>
+      </div>
+
+    </div>
+
+    <div id="content-container">
+    </div>
+
+    <!-- Status var -->
+    <div style="position:absolute; right:0px; bottom:0px; z-index:5">
+      <span id="status">Status: normal</span>
+    </div>
+
+    <!-- Settings box -->
+    <div id="settingsbox" style="display:none; background-color: #1e252c; padding:6px; position:absolute; width:300px; right:0px; top:70px; z-index:5">
+      <span style="font-size:16px;">Settings and Info</span>
+      <button id="settingsclose" style="float:right; font-weight:bold; color:#00b7ff">&#10005;</button>
+      <hr>
+      <!-- Settings -->
+      <span>Default homepage:</span>
+      <br>
+      <input type="text" id="def-homepg" value="https://google.com/" placeholder="https://...">
+      <br>
+      <span>More options coming soon</span>
+      <br>
+      <a id="resetdata">Reset all data</a>
+      <br>
+      <span style="color:red" id="errtxt"></span>
+      <hr>
+      <!-- Info -->
+      <span style="font-size:16px;">Info</span>
+      <br>
+      <span>
+        Voltaire Browser: a fully functional unblocked browser app for Chromebooks by Cadecraft.
+        <br><br><a id="lk-yt">YouTube</a>
+        <br><a id="lk-site">My website</a>
+        <br><br>Check the Chrome Extensions page on my website for the latest version and future updates of Voltaire Browser.
+        Feel free to <a id="lk-discord">join the Discord server</a> to give me feedback or suggestions.
+      </span>
+    </div>
+
+  </body>
+</html>
